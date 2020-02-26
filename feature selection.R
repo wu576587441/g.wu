@@ -77,6 +77,8 @@ top_topfeaturesfreq_GTV
 selected_30_GTV <- subset(top_topfeaturesfreq_GTV, freq >= 30,select = c(x))
 GTV_top_features_name<- array(selected_30_GTV$x)
 GTV_top_features <- Data_GTV[GTV_top_features_name]
+
+#--feature correlation
 corMatrix_top_GTV <-  cor(GTV_top_features, y = NULL, use = "ev",method = "spearman")
 highly_correlated_columns_top_GTV <- findCorrelation(corMatrix_top_GTV,cutoff = 0.8,verbose = FALSE,names = FALSE,exact = TRUE)
 #GTV_top_features <- GTV_top_features[, -highly_correlated_columns_top_GTV]
