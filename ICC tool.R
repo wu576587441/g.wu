@@ -1,11 +1,11 @@
 #-----set pathway-----#
-setwd("")
+setwd(""C:/Users/data")
 #-----packages------#
 library("irr")
 #--Load data- "\" or "\\"
-seg1 <- read.table()#-- features table from seg1
-seg2 <- read.table()#-- features table from seg2
-seg3 <- read.table()#-- features table from seg3
+seg1 <- read.table(header=T,file="C:/Users/data/seg1.csv",sep=",")
+seg2 <- read.table(header=T,file="C:/Users/data/seg2.csv",sep=",")
+seg3 <- read.table(header=T,file="C:/Users/data/seg3.csv",sep=",")
 seg1 <- seg1[,1:1339]
 seg2 <- seg2[,1:1339]
 seg3 <- seg3[,1:1339]
