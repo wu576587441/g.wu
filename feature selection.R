@@ -65,6 +65,7 @@ for (i in 1:100) {
   
   top_features_GTV[i,] <-rfProfile_GTV$optVariables[1:8]
   AUCs_GTV[i] <- ForestRocTesting_GTV$auc
+}
 
 #--features order
 top_features_GTV<-as.vector(top_features_GTV, mode="any")
