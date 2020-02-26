@@ -82,7 +82,7 @@ highly_correlated_columns_top_GTV <- findCorrelation(corMatrix_top_GTV,cutoff = 
 #GTV_top_features <- GTV_top_features[, -highly_correlated_columns_top_GTV]
 
 #--Brouta
-libarary("Boruta")
+library("Boruta")
 set.seed(1234)
 boruta_GTV <-Boruta (GTV_top_features,as.factor(TT_Outcome),pValue = 0.01,mcAdj = TRUE,maxRuns = 500,doTrace = 2,ntree =500,holdHistory = TRUE,getImp = getImpExtraZ)
 plot(boruta_GTV)
