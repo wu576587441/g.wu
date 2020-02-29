@@ -10,7 +10,7 @@ ForestRocGTV_feature<-roc(Outcome_balanced_GTV ,ForestPrediction_GTV_feature, ci
 ForestRocGTV_feature
 plot(ForestRocGTV_feature)
 P_GTV_training<-predict(RandomForest_GTV_feature)
-CM_GTV_training<-confusionMatrix(as.factor(P_GTV_training),as.factor(Outcome_balanced_GTV))
+CM_GTV_training<-confusionMatrix(as.factor(P_GTV_training),as.factor(Outcome_balanced_GTV),positive = "1")
 CM_GTV_training
 
 #---IDI
